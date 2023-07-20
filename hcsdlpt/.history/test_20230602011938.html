@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .loading-container {
+            position: relative;
+            display: inline-block;
+        }
+
+        .loading-icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            /* Thêm CSS cho biểu tượng loading */
+        }
+
+        #submitBtn {
+            position: relative;
+            z-index: 1;
+            /* Thêm CSS cho nút submit */
+        }
+    </style>
+</head>
+
+<body>
+    <button type="submit" class="btn btn-primary" id="submitBtn">Submit</button>
+    <div class="loading-container">
+        <div class="loading-icon">
+            <img src="https://i.gifer.com/origin/34/34338d26023e5515f6cc8969aa027bca_w200.gif" alt="">
+        </div>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+        integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        $(document).ready(function () {
+            $('#submitBtn').click(function () {
+                $('.loading-container').addClass('loading');
+                $(this).hide(); // Ẩn nút submit
+                // Xử lý logic tải dữ liệu
+
+                // Sau khi tải hoàn tất
+                $('.loading-container').removeClass('loading');
+                $('#submitBtn').show(); // Hiển thị lại nút submit
+            });
+        });
+    </script>
+</body>
+
+</html>

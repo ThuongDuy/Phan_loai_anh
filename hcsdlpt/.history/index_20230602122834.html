@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&amp;display=swap"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css">
+    <link rel="stylesheet" href="./main.css">
+</head>
+
+<body>
+
+    <h2 class="upload-title">Upload image here</h2>
+    <div class="avatar-upload">
+        <div class="avatar-edit">
+            <input type="file" id="imageUpload" accept=".png, .jpg, .jpeg" class="txt-file">
+            <label for="imageUpload" class="label-upload">
+                <i id="camera" class="fas fa-camera"></i>
+            </label>
+        </div>
+
+        <div class="avatar-preview">
+            <div id="imagePreview" style="background-image: url('upload.png');"></div>
+        </div>
+    </div>
+
+    <button class="btn" id="btnSubmit">Submit<span>&#8594;</span></button>
+
+    <div class="spinner-wrapper">
+        <div id="spin"></div>
+        <div id="spinner-template" style="display:none;">
+            <div class="spinner-container">
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xml:space="preserve" x="0px" y="0px" viewBox="0, 0, 100, 100">
+                    <g>
+                        <g class="spinner">
+                            <circle class="path" fill="none" stroke="#7DB0D5" stroke-width="7" stroke-miterlimit="10"
+                                stroke-linecap="round" cx="50" cy="50" r="44" />
+                        </g>
+                        <polyline class="check" fill="none" stroke="#7DB0D5" stroke-width="8" stroke-linecap="round"
+                            stroke-miterlimit="10" stroke-linejoin="round" points="70,35 45,65 30,52" />
+                        <path class="cross" fill="none" stroke="#7DB0D5" stroke-width="16" stroke-linecap="round"
+                            stroke-miterlimit="10" d="M70,30 l-40,40 M70,70 l-40,-40" />
+                    </g>
+                </svg>
+            </div>
+        </div>
+    </div>
+
+    <div class="text-result" id="textResult">
+        <div class="cm-wrapper">
+            <button class="cm-navbar-btn">
+                <h1>Kết quả: Nữ</h1>
+                <span class="annimation-line"></span>
+                <span class="annimation-line"></span>
+                <span class="annimation-line"></span>
+                <span class="annimation-line"></span>
+            </button>
+        </div>
+    </div>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+        integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+        crossorigin="anonymous" />
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+        integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src='//cdnjs.cloudflare.com/ajax/libs/ICanHaz.js/0.10.3/ICanHaz.min.js'></script>
+    <script src='//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js'></script>
+    <script src="./scripts.js"></script>
+</body>
+
+</html>

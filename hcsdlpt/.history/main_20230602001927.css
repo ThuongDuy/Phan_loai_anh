@@ -1,0 +1,56 @@
+.avatar-upload {
+    position: relative;
+    max-width: 400px;
+    margin: 50px auto;
+}
+
+.avatar-edit {
+    position: absolute;
+    right: 12px;
+    top: 10px;
+    z-index: 1;
+}
+
+#camera {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.txt-file {
+    display: none;
+}
+
+.label-upload {
+    display: inline-block;
+    width: 34px;
+    height: 34px;
+    background: #f7f7f7;
+    margin-bottom: 0;
+    border-radius: 100%;
+    border: 1px solid #e5e5e5;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    transition: .3s ease;
+}
+
+.label-upload:hover {
+    background: #e5e5e5;
+}
+
+.avatar-preview {
+    width: 400px;
+    height: 225px;
+    position: relative;
+    border-radius: 5px;
+    border: 1px solid #e5e5e5;
+}
+
+.avatar-preview>div {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
